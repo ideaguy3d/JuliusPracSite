@@ -1,0 +1,86 @@
+h1
+	background: deepskyblue
+	transition: all 400ms ease
+	display inline-block
+	color: white
+	&:hover
+		animation: slideShow 4s ease
+
+@keyframes slideShow
+	0%
+		margin-left: 0px
+		margin-top: 0px
+	25%
+		margin-left: 50px
+		margin-top: 0px
+	50%
+		margin-left: 50px
+		margin-top: 50px
+	75%
+		margin-left: 0px
+		margin-top: 50px
+	100%
+		margin-left: 0px
+		margin-top: 0px
+
+html
+	padding: 3rem
+
+button
+	background: lighten(red, 20%)
+	color: white
+	border: 0
+	padding: .5em 2em
+	border-radius: 6px
+	cursor: pointer
+	border-bottom: 3px solid black
+	outline: none
+	position: relative
+	overflow: hidden
+	&:hover
+		border-botom-width: 2px
+		margin-top: 1px
+	&:active, &:focus
+		border-bottom-width: 1px
+		margin-top: 2px
+		animation shakeBtn 20ms 2
+	.btn-bg
+		position: absolute
+		background: linear-gradient(to bottom, darken(deepskyblue, 40%), deepskyblue)
+		top: -100%
+		left: 0px
+		width: 100%
+		height: 200%
+		transition: all 600ms ease
+	&:hover
+		.btn-bg
+			top: 0
+	.btn-text
+		position: relative
+		z-index 1
+
+@keyframes shakeBtn
+	25%
+		left: -2px
+	50%
+		right: -2px
+
+.dropdown
+	display: inline-block
+	nav
+		max-height: 0
+		overflow: hidden
+		transition all 600ms ease
+		a
+			display block
+	&:hover
+		nav
+			max-height: 200px
+
+a
+	display: inline-block
+	background: lighten(blue, 20%)
+	color: white
+	text-decoration: none
+	padding: 1em 2em
+	font-family: sans-serif
